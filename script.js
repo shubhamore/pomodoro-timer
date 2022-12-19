@@ -34,12 +34,12 @@ startStop.addEventListener("click", function () {
         startStop.textContent = "Stop"
         isWorking = true
         var t = setInterval(() => {
-            time--
-            if (time <= 0 || isWorking == false) {
-                stop(t)
-            }
-            else {
+            if(time>0&&isWorking){
+                time--
                 updateTime()
+            }
+            else{
+                stop(t)
             }
         }, 1000)
     }

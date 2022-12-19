@@ -25,24 +25,22 @@ function updateTime() {
     box.textContent = min + ":" + sec
 }
 startStop.addEventListener("click", function () {
-    if (isWorking) {
-        startStop.textContent = "Start"
-        isWorking = false
-    }
-    // checkWorking()
-    else if (isWorking == false) {
-        startStop.textContent = "Stop"
-        isWorking = true
-        var t = setInterval(() => {
-            if(time>0&&isWorking){
-                time--
-                updateTime()
-            }
-            else{
-                stop(t)
-            }
-        }, 1000)
-    }
+        if (isWorking == false) {
+            startStop.textContent = "Stop"
+            isWorking = true
+            var t = setInterval(() => {
+                if(time>0&&isWorking){
+                    time--
+                    updateTime()
+                }
+                else{
+                    stop(t)
+                }
+            }, 1000)
+        }
+        else{
+            checkWorking()
+        }
 })
 function stop(t) {
     if (t) {

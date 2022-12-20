@@ -4,6 +4,7 @@ let btn = document.querySelectorAll(".btn")
 let time = 300
 let isWorking = false
 updateTime()
+var interval
 btn.forEach(b => {
     b.addEventListener("click", function () {
         checkWorking()
@@ -13,6 +14,7 @@ btn.forEach(b => {
 })
 function checkWorking() {
     if (isWorking) {
+        stop()
         isWorking = false
         startStop.textContent = "Start"
     }
@@ -24,26 +26,24 @@ function updateTime() {
     let sec =("0"+temp).slice(-2)
     box.textContent = min + ":" + sec
 }
-startStop.addEventListener("click", function () {
-        if (isWorking == false) {
-            startStop.textContent = "Stop"
-            isWorking = true
-            var t = setInterval(() => {
-                if(time>0&&isWorking){
-                    time--
-                    updateTime()
-                }
-                else{
-                    stop(t)
-                }
-            }, 1000)
-        }
-        else{
-            checkWorking()
-        }
-})
-function stop(t) {
-    if (t) {
-        clearInterval(t)
+startStop.addEventListener("click",toggleStart)
+function toggleStart(e) {
+    if (isWorking == false) {
+        startStop.textContent = "Stop"
+        isWorking = true
+        interval = setInterval(() => {
+            if(time>0&&isWorking){
+                time--
+                updateTime()
+            }
+        }, 1000)
+    }
+    else{
+        checkWorking()
+    }
+}
+function stop() {
+    if (interval) {
+        clearInterval(interval)
     }
 }

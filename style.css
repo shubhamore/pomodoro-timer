@@ -13,9 +13,16 @@ h1{
     text-align: center;
 }
 .heading{
+    font-size: 55px;
     font-weight: bold;
     text-transform: capitalize;
-    padding-top: 20px;
+    padding-top: 25px;
+    font-family: 'Share Tech Mono', monospace;
+    color: #ffffff;
+    text-align: center;
+    /* position: absolute;      */
+    color: #daf6ff;
+    text-shadow: 0 0 20px rgba(10, 175, 230, 1),  0 0 20px rgba(10, 175, 230, 0);
 }
 .center{
     text-align: center;
@@ -24,7 +31,7 @@ h1{
     left: 50%;
     transform: translate(-50%,-50%);
 }
-.btn{
+/* .btn{
     color: black;
     padding: 5px 10px;
     border-radius: 5px;
@@ -36,11 +43,185 @@ h1{
     background-color: rgb(167, 165, 165);
     transform: scale(1.05);
     cursor: pointer;
+} */
+.btn,
+.btn *,
+.btn :after,
+.btn :before,
+.btn:after,
+.btn:before {
+  border: 0 solid;
+  box-sizing: border-box;
 }
+.btn {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #000;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  font-weight: 900;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+  text-transform: uppercase;
+  padding: 5px 10px;
+    border-radius: 5px;
+    margin: 10px;
+    font-size: 20px;
+}
+.btn:disabled {
+  cursor: default;
+}
+.btn:-moz-focusring {
+  outline: auto;
+}
+.btn svg {
+  display: block;
+  vertical-align: middle;
+}
+.btn [hidden] {
+  display: none;
+}
+.btn {
+  border-radius: 99rem;
+  border-width: 2px;
+  overflow: hidden;
+  padding: 0.8rem 3rem;
+  position: relative;
+}
+.btn span {
+  mix-blend-mode: difference;
+}
+.btn:after,
+.btn:before {
+  --tilt: 1.2rem;
+  background: #fff;
+  -webkit-clip-path: polygon(
+    0 0,
+    calc(100% - var(--tilt)) 0,
+    100% 100%,
+    0 100%
+  );
+  clip-path: polygon(0 0, calc(100% - var(--tilt)) 0, 100% 100%, 0 100%);
+  content: "";
+  display: block;
+  height: 100%;
+  left: calc(-100% - var(--tilt));
+  position: absolute;
+  top: 0;
+  transform: translateX(var(--progress, 0));
+  transition: transform 0.2s ease;
+  width: calc(100% + var(--tilt));
+}
+.btn:after {
+  left: 100%;
+  transform: translateX(var(--progress, 0)) rotate(180deg);
+  z-index: -1;
+}
+.btn:hover:before {
+  --progress: 100%;
+}
+.btn:hover:after {
+  --progress: -100%;
+}
+
 #box{
     font-size: 125px;
+    font-family: 'Share Tech Mono', monospace;
+    color: #ffffff;
+    color: #daf6ff;
+    text-shadow: 0 0 20px rgba(10, 175, 230, 1),  0 0 20px rgba(10, 175, 230, 0);
 }
-.start-stop{
+.start-stop,
+.start-stop *,
+.start-stop :after,
+.start-stop :before,
+.start-stop:after,
+.start-stop:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+.start-stop {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #000;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  font-weight: 900;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+  text-transform: uppercase;
+}
+.start-stop:disabled {
+  cursor: default;
+}
+.start-stop:-moz-focusring {
+  outline: auto;
+}
+.start-stop svg {
+  display: block;
+  vertical-align: middle;
+}
+.start-stop [hidden] {
+  display: none;
+}
+.start-stop {
+  border-radius: 99rem;
+  border-width: 2px;
+  overflow: hidden;
+  padding: 0.8rem 3rem;
+  position: relative;
+}
+.start-stop span {
+  mix-blend-mode: difference;
+}
+.start-stop:after,
+.start-stop:before {
+  --tilt: 1.2rem;
+  background: #fff;
+  -webkit-clip-path: polygon(
+    0 0,
+    calc(100% - var(--tilt)) 0,
+    100% 100%,
+    0 100%
+  );
+  clip-path: polygon(0 0, calc(100% - var(--tilt)) 0, 100% 100%, 0 100%);
+  content: "";
+  display: block;
+  height: 100%;
+  left: calc(-100% - var(--tilt));
+  position: absolute;
+  top: 0;
+  transform: translateX(var(--progress, 0));
+  transition: transform 0.2s ease;
+  width: calc(100% + var(--tilt));
+}
+.start-stop:after {
+  left: 100%;
+  transform: translateX(var(--progress, 0)) rotate(180deg);
+  z-index: -1;
+}
+.start-stop:hover:before {
+  --progress: 100%;
+}
+.start-stop:hover:after {
+  --progress: -100%;
+}
+
+/* .start-stop{
     cursor: pointer;
     color: #00ff9c;
     background-color: #2b238e;
@@ -50,9 +231,14 @@ h1{
     width: 150px;
     margin-top: 10px;
     border: 1px solid #2b238e;
-}
+} */
 .credits{
+    font-size: 20px;
+    font-family: 'Share Tech Mono', monospace;
+    color: #ffffff;
+    color: #daf6ff;
+    text-shadow: 0 0 20px rgba(10, 175, 230, 1),  0 0 20px rgba(10, 175, 230, 0);
     position: absolute;
-    bottom: 2px;
-    right: 2px;
+    bottom: 11px;
+    right: 10px;
 }
